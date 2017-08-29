@@ -1,6 +1,11 @@
 from btcmarkets import BTCMarkets 
 
-client = BTCMarkets ('api key', 'private key') 
+import config
+
+api_key = config.api_key
+private_key = config.private_key
+
+client = BTCMarkets (api_key, private_key) 
 
 #print client.trade_history('AUD', 'BTC', 10, 1)
 
