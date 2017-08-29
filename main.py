@@ -13,5 +13,5 @@ client = BTCMarkets (api_key, private_key)
  
 #print client.order_create('AUD', 'LTC', 100000000, 100000000, 'Bid', 'Limit', '1')
 
-#print client.account_balance()
+print client.get_tick('ETH','AUD')
 
