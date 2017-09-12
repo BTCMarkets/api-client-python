@@ -82,5 +82,21 @@ class BTCMarkets:
         return post_request(self.key, self.secret, '/order/detail', postData) 
 
     def account_balance(self):
+
         return get_request(self.key, self.secret, '/account/balance') 
+
+    def get_market_tick(self,currency_in,currency_out):
+        
+        return get_request(self.key, self.secret, '/market/%s/%s/tick' % (currency_in,currency_out))
+
+    def get_market_orderbook(self,currency_in,currency_out):
+        
+        return get_request(self.key, self.secret, '/market/%s/%s/orderbook' % (currency_in,currency_out))
+
+    def get_market_trades(self,currency_in,currency_out):
+
+        return get_request(self.key, self.secret, '/market/%s/%s/trades' % (currency_in,currency_out))
+
+
+
 
